@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        registry = "440833543191.dkr.ecr.us-east-1.amazonaws.com/devops/my-springboot-repoc"
+        registry = "440833543191.dkr.ecr.us-east-1.amazonaws.com/devops/my-helm-repoc"
     }
     stages {
         stage('Checkout') {
@@ -29,7 +29,7 @@ pipeline {
             steps {
                 script {
                     sh "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 440833543191.dkr.ecr.us-east-1.amazonaws.com"
-                    sh "docker push 440833543191.dkr.ecr.us-east-1.amazonaws.com/devops/my-springboot-repoc:latest"
+                    sh "docker push 440833543191.dkr.ecr.us-east-1.amazonaws.com/devops/my-helm-repoc:latest"
                     
                 }
             }
