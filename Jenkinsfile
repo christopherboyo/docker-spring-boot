@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        registry = "211223789150.dkr.ecr.us-east-1.amazonaws.com/my-docker-repo"
+        registry = "440833543191.dkr.ecr.us-east-1.amazonaws.com/devops/my-springboot-repoc"
     }
     stages {
         stage('Checkout') {
